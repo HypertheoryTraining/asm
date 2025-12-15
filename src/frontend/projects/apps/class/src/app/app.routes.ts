@@ -53,6 +53,42 @@ const baseRoutes: AppRoutes = [
       linkDescription: 'More durable',
     },
   },
+  {
+    path: 'mutations',
+    loadChildren: () =>
+      import('../../domains/mutations/mutations.routes').then((m) => m.mutationsRoutes),
+    data: {
+      title: 'Mutations',
+      linkText: 'Mutations',
+      iconName: 'solarCardSearch',
+      pageTitle: 'Mutations',
+      linkDescription: 'Changing Data',
+    },
+  },
+  {
+    path: 'signal-store',
+    loadChildren: () =>
+      import('../../domains/signal-store/signal-store.routes').then((m) => m.signalStoreRoutes),
+    data: {
+      title: 'Signal Store',
+      linkText: 'Signal Store',
+      iconName: 'solarCardSearch',
+      pageTitle: 'Signal Store',
+      linkDescription: 'Hierarchical Data Store',
+    },
+  },
+  {
+    path: 'redux-store',
+    loadChildren: () =>
+      import('../../domains/redux-store/redux-store.routes').then((m) => m.reduxStoreRoutes),
+    data: {
+      title: 'Redux Store',
+      linkText: 'Redux Store',
+      iconName: 'solarCardSearch',
+      pageTitle: 'Redux Store',
+      linkDescription: 'Event Sourcing and Global Data Store',
+    },
+  },
 ];
 
 /**
