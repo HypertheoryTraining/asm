@@ -6,9 +6,11 @@ import { FeaturePage } from '@app-shell/features/feature-page';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FeaturePage],
   template: `<ui-feature-page pageName="timer">
-    <h1 class="text-2xl font-black">Time Until We Start at 9:30 AM ET</h1>
-
-    <p class="text-3xl font-bold text-accent">{{ timeLeft() }}</p>
+    <div class="flex flex-col items-center gap-20 p-20">
+      <p class="text-5xl font-bold text-blue-400">Angular State Management</p>
+      <h1 class="text-2xl font-black text-blue-500">Time Until We Start at 9:30 AM ET</h1>
+      <p class="text-5xl font-bold text-accent">{{ timeLeft() }}</p>
+    </div>
   </ui-feature-page>`,
   styles: ``,
 })

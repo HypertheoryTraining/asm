@@ -4,6 +4,7 @@ import { HomePage } from './pages/home';
 import { ClassesPage } from './pages/classes';
 import { ThisClassPage } from './pages/this-class';
 import { TimerPage } from './pages/timer';
+import { IntroPage } from './pages/intro';
 
 export const homeRoutes: FeatureRoutes = [
   {
@@ -43,6 +44,15 @@ export const homeRoutes: FeatureRoutes = [
         data: {
           title: 'Timer',
           linkText: 'Timer',
+        },
+        children: [],
+      },
+      {
+        path: 'intro',
+        component: IntroPage,
+        data: {
+          title: 'Intros',
+          linkText: 'Intros',
         },
         children: [],
       },
