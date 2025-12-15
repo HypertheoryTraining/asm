@@ -2,7 +2,7 @@ import { Home } from './redux-store';
 import { HomePage } from './pages/home';
 
 import { FeatureRoutes } from '@app-types/routing/feature-routing';
-export const redux-storeRoutes: FeatureRoutes = [
+export const reduxStoreRoutes: FeatureRoutes = [
   {
     path: '',
     component: Home,
@@ -15,7 +15,7 @@ export const redux-storeRoutes: FeatureRoutes = [
           linkText: 'redux-store',
         },
         children: [],
-      }
+      },
     ],
   },
 ];

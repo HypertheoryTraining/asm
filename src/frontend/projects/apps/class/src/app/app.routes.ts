@@ -39,6 +39,20 @@ const baseRoutes: AppRoutes = [
       linkDescription: 'Somewhat durable',
     },
   },
+  {
+    path: 'reference-data',
+    loadChildren: () =>
+      import('../../domains/reference-data/reference-data.routes').then(
+        (m) => m.referenceDataRoutes,
+      ),
+    data: {
+      title: 'Reference Data',
+      linkText: 'Reference Data',
+      iconName: 'solarCardSearch',
+      pageTitle: 'Resources',
+      linkDescription: 'More durable',
+    },
+  },
 ];
 
 /**

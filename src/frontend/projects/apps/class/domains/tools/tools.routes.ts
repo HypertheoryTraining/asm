@@ -1,8 +1,8 @@
-import { Home } from './signal-store';
+import { Home } from './tools';
 import { HomePage } from './pages/home';
 
 import { FeatureRoutes } from '@app-types/routing/feature-routing';
-export const signalStoreRoutes: FeatureRoutes = [
+export const toolsRoutes: FeatureRoutes = [
   {
     path: '',
     component: Home,
@@ -12,10 +12,10 @@ export const signalStoreRoutes: FeatureRoutes = [
         component: HomePage,
         data: {
           title: 'Welcome',
-          linkText: 'signal-store',
+          linkText: 'tools',
         },
         children: [],
-      },
+      }
     ],
   },
 ];
