@@ -27,6 +27,18 @@ const baseRoutes: AppRoutes = [
       linkDescription: 'Inputs, Outputs, and Etc.',
     },
   },
+  {
+    path: 'browser-state',
+    loadChildren: () =>
+      import('../../domains/browser-state/browser-state.routes').then((m) => m.browserStateRoutes),
+    data: {
+      title: 'Browser State',
+      linkText: 'Browser State',
+      iconName: 'solarCardSearch',
+      pageTitle: 'Local Storage, Session Storage, and Etc.',
+      linkDescription: 'Somewhat durable',
+    },
+  },
 ];
 
 /**
