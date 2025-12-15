@@ -1,3 +1,4 @@
 import { HttpHandler } from 'msw';
 import { bffHandlers } from './bff/handlers';
-export const handlers: HttpHandler[] = [...bffHandlers];
+import { movieHandlers } from './demos/moviesHandler';
+export const handlers: HttpHandler[] = [...bffHandlers, ...movieHandlers];

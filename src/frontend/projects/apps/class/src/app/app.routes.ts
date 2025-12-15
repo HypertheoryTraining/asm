@@ -90,6 +90,18 @@ const baseRoutes: AppRoutes = [
     },
   },
   {
+    path: 'patterns',
+    loadChildren: () =>
+      import('../../domains/patterns/patterns.routes').then((m) => m.patternsRoutes),
+    data: {
+      title: 'Patterns',
+      linkText: 'Patterns',
+      iconName: 'solarCardSearch',
+      pageTitle: 'Patterns',
+      linkDescription: 'API Access Patterns',
+    },
+  },
+  {
     path: 'schemata',
     loadChildren: () =>
       import('../../domains/schemata/schemata.routes').then((m) => m.schemataRoutes),

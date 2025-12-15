@@ -3,6 +3,7 @@ import { Home } from './home';
 import { HomePage } from './pages/home';
 import { ClassesPage } from './pages/classes';
 import { ThisClassPage } from './pages/this-class';
+import { TimerPage } from './pages/timer';
 
 export const homeRoutes: FeatureRoutes = [
   {
@@ -33,6 +34,15 @@ export const homeRoutes: FeatureRoutes = [
         data: {
           title: 'This Class',
           linkText: 'This Class',
+        },
+        children: [],
+      },
+      {
+        path: 'timer',
+        component: TimerPage,
+        data: {
+          title: 'Timer',
+          linkText: 'Timer',
         },
         children: [],
       },
