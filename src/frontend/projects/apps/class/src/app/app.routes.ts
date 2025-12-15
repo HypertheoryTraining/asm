@@ -89,6 +89,29 @@ const baseRoutes: AppRoutes = [
       linkDescription: 'Event Sourcing and Global Data Store',
     },
   },
+  {
+    path: 'schemata',
+    loadChildren: () =>
+      import('../../domains/schemata/schemata.routes').then((m) => m.schemataRoutes),
+    data: {
+      title: 'Schemata',
+      linkText: 'Schemata',
+      iconName: 'solarCardSearch',
+      pageTitle: 'Schemata',
+      linkDescription: 'Validations, OpenApi, and Etc.',
+    },
+  },
+  {
+    path: 'tools',
+    loadChildren: () => import('../../domains/tools/tools.routes').then((m) => m.toolsRoutes),
+    data: {
+      title: 'Tools',
+      linkText: 'Tools',
+      iconName: 'solarCardSearch',
+      pageTitle: 'Tools',
+      linkDescription: 'Various Tools',
+    },
+  },
 ];
 
 /**
